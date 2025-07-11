@@ -25,12 +25,6 @@
                 <h1>SUGGESTION SYSTEM ONLINE</h1>
                 <h3 class="sub-heading">PT Dharma Poliplast</h3>
                 <p>Selamat datang di layanan Suggestion System Online, ini adalah pengganti form SS (Form Biru) dan google form yang selama ini di gunakan. Secara garis besar tidak ada konten yang berubah, jadi anda dapat Membuat SS dimana saja dan kapan saja menggunakan PC atau Handphone.</p>
-                <div class="contact-person">
-                    <p class="mb-1">Jika ada yang belum jelas silahkan hubungi PIC Management Improvement dan IT Developer kami di bawah ini:</p>
-                    <strong>Contact Person</strong><br>
-                    (Yudi: mprayudi@dpplast.com / 0851 5746 2276)<br>
-                    (Devi: devi.novianti@dpplast.com / 0856 1718 716)<br>
-                </div>
                 <p class="closing-text">TERIMA KASIH ATAS KONTRIBUSINYA & TINGKATKAN SEMANGAT AKAN BUDAYA BERIMPROVEMENT</p>
             </div>
             <div class="col-lg-5">
