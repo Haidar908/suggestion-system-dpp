@@ -16,7 +16,7 @@
 <body>
     {{-- Header dan Konten Utama tidak ada perubahan --}}
     <header class="header d-flex justify-content-between align-items-center">
-        <div><img src="{{ asset('images/logo-dharma.png') }}" alt="Logo Perusahaan" class="logo"></div>
+        <div><img src="{{ asset('assets/images/PT-Dharma-Poliplast-02(1)1.png') }}" alt="Logo Perusahaan" class="logo"></div>
         <div class="version">VERSION: 1.0.0</div>
     </header>
     <main class="container-fluid main-content">
