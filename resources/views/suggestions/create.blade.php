@@ -44,7 +44,7 @@
                 <fieldset class="mb-4 p-3 border rounded">
                     <legend class="float-none w-auto px-2 fs-5">Informasi Pengusul</legend>
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>
+                        <label for="nama" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="nama" name="nama" value="{{ old('nama') }}" required>
                     </div>
                     <div class="mb-3">

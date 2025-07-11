@@ -26,6 +26,9 @@
             
             {{-- [BARU] Link untuk manajemen departemen --}}
             <a class="nav-link {{ request()->routeIs('admin.departments.*') ? 'active' : '' }}" href="{{ route('admin.departments.index') }}"><i class="fas fa-building me-2"></i> Kelola Departemen</a>
+            
+            {{-- [BARU] Link untuk manajemen access code --}}
+            <a class="nav-link {{ request()->routeIs('admin.access_codes.*') ? 'active' : '' }}" href="{{ route('admin.access_codes.index') }}"><i class="fas fa-key me-2"></i> Kelola Kode Akses</a>
 
             {{-- Form Logout --}}
             <form action="{{ route('admin.logout') }}" method="POST" class="mt-4">
