@@ -28,12 +28,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
     // --- Route untuk Autentikasi Admin ---
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [AuthController::class, 'login']);
+    
+    // [BARU] Menambahkan kembali route untuk registrasi admin
+    Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+    Route::post('/register', [AuthController::class, 'register']);
+
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
     
     // --- Grup Route yang dilindungi Middleware Admin ---
     Route::middleware([AdminMiddleware::class])->group(function () {
-
-        // Route untuk mengelola Suggestions
         Route::get('/suggestions', [AdminSuggestionController::class, 'index'])->name('suggestions.index');
         Route::get('/suggestions/export/excel', [AdminSuggestionController::class, 'exportExcel'])->name('suggestions.export.excel');
         Route::get('/suggestions/{suggestion}', [AdminSuggestionController::class, 'show'])->name('suggestions.show');
@@ -41,10 +44,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::delete('/suggestions/{suggestion}', [AdminSuggestionController::class, 'destroy'])->name('suggestions.destroy');
         Route::post('/suggestions/bulk-destroy', [AdminSuggestionController::class, 'bulkDestroy'])->name('suggestions.bulkDestroy');
 
-        // Route untuk mengelola Departments
         Route::resource('/departments', DepartmentController::class);
-
-        // [DIUBAH] Route untuk Kode Akses menggunakan sintaks yang Anda berikan
         Route::resource('access-codes', AccessCodeController::class)->names([
             'index' => 'access_codes.index',
             'create' => 'access_codes.create',
@@ -61,7 +61,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
 // == ROUTE REDIRECT BAWAAN LARAVEL ==
 Route::get('/dashboard', function () {
     if (auth()->check() && auth()->user()->role === 'admin') {
-        // Arahkan ke halaman daftar suggestion
         return redirect()->route('admin.suggestions.index');
     }
     return redirect()->route('home');
